@@ -72,3 +72,44 @@ header {
         display: block;
     }
 }
+
+
+/* CSS footer */
+footer.custom-footer {
+    background-color: #2ecc71;
+    color: white;
+  }
+  footer .social-icons a {
+    color: white;
+    font-size: 1.4rem;
+    margin-right: 15px;
+    transition: opacity 0.3s;
+  }
+  footer .social-icons a:hover {
+    opacity: 0.8;
+  }
+
+  /* fixar footer em baixo  */
+  html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-footer {
+    margin-top: auto;
+}
+
+  /* Estilo para centralizar no mobile */
+  @media (max-width: 576px) {
+    footer .row > div {
+      text-align: center;
+    }
+    footer .social-icons {
+      justify-content: center;
+    }
+  }
