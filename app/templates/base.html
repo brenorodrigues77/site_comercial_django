@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'app/base.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <title>Home</title>
+    <title>{% block title %}Home{% endblock title %}</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         </div>
     </header>
-
+    <!-- animação do menu em javascript -->
     <script>
         const toggle = document.getElementById('menu-toggle');
         const menu = document.getElementById('menu');
@@ -32,57 +32,56 @@
             menu.classList.toggle('active');
         });
     </script>
-</body>
-{% block content %}
-{% endblock content %}
+    {% block content %}
+    {% endblock content %}
 
-<!-- FOOTER -->
-<footer class="custom-footer py-5">
-    <div class="container">
-        <div class="row d-flex justify-content-evenly align-items-start">
-            <!-- Coluna 1: Logo / Empresa -->
-            <div class="col-12 col-md-3">
-                <h5 class="fw-bold">Minha Empresa</h5>
-                <p class="mb-0">Excelência em soluções digitais.</p>
-            </div>
+    <!-- FOOTER -->
+    <footer class="custom-footer py-5">
+        <div class="container">
+            <div class="row d-flex justify-content-evenly align-items-start">
+                <!-- Coluna 1: Logo / Empresa -->
+                <div class="col-12 col-md-3">
+                    <h5 class="fw-bold">Minha Empresa</h5>
+                    <p class="mb-0">Excelência em soluções digitais.</p>
+                </div>
 
-            <!-- Coluna 2: Sobre nós -->
-            <div class="col-12 col-md-3">
-                <h6 class="fw-bold">Sobre nós</h6>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white text-decoration-none">Quem somos</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Serviços</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Carreiras</a></li>
-                </ul>
-            </div>
+                <!-- Coluna 2: Sobre nós -->
+                <div class="col-12 col-md-3">
+                    <h6 class="fw-bold">Sobre nós</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Quem somos</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Serviços</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Carreiras</a></li>
+                    </ul>
+                </div>
 
-            <!-- Coluna 3: Contato -->
-            <div class="col-12 col-md-3">
-                <h6 class="fw-bold">Contato</h6>
-                <ul class="list-unstyled">
-                    <li>Email: contato@empresa.com</li>
-                    <li>Telefone: (11) 99999-9999</li>
-                    <li>Endereço: Rua Exemplo, 123</li>
-                </ul>
-            </div>
+                <!-- Coluna 3: Contato -->
+                <div class="col-12 col-md-3">
+                    <h6 class="fw-bold">Contato</h6>
+                    <ul class="list-unstyled">
+                        <li>Email: contato@empresa.com</li>
+                        <li>Telefone: (11) 99999-9999</li>
+                        <li>Endereço: Rua Exemplo, 123</li>
+                    </ul>
+                </div>
 
-            <!-- Coluna 4: Redes sociais -->
-            <div class="col-12 col-md-3">
-                <h6 class="fw-bold">Redes sociais</h6>
-                <div class="d-flex social-icons mt-2">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <!-- Coluna 4: Redes sociais -->
+                <div class="col-12 col-md-3">
+                    <h6 class="fw-bold">Redes sociais</h6>
+                    <div class="d-flex social-icons mt-2">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Linha final -->
-    <div class="w-100 text-center mt-4 pt-3 border-top border-light small">
-        © 2025 Minha Empresa. Todos os direitos reservados.
-    </div>
-</footer>
+        <!-- Linha final -->
+        <div class="w-100 text-center mt-4 pt-3 border-top border-light small">
+            © 2025 Minha Empresa. Todos os direitos reservados.
+        </div>
+    </footer>
 </body>
 
 </html>

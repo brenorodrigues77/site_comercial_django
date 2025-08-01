@@ -1,4 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-ola
-{% endblock content %}
+
+<body>
+  <div class="container">
+    {% for homes in home %}
+    <h4>{{ homes.name }}</h4>
+    {% endfor %}
+  </div>
+</body>
+
+
+{% endblock %}
