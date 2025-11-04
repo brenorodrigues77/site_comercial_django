@@ -1,3 +1,138 @@
+/* --- Melhorias visuais e responsividade customizadas --- */
+
+/* Botões customizados */
+.btn-outline-light {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+    background: #27ae60;
+    color: #fff;
+    border-color: #27ae60;
+}
+
+/* Cards de projetos */
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 16px 0 rgba(44, 204, 113, 0.08);
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 6px 32px 0 rgba(44, 204, 113, 0.18);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 220px;
+}
+
+/* Badges */
+.badge.bg-success {
+    background: linear-gradient(90deg, #27ae60 60%, #2ecc71 100%);
+}
+
+/* Seção de feedback */
+.fst-italic {
+    color: #27ae60;
+    font-size: 1.2rem;
+}
+
+/* Formulário de contato */
+.form-control:focus {
+    border-color: #27ae60;
+    box-shadow: 0 0 0 0.2rem rgba(39, 174, 96, 0.15);
+}
+
+.btn-outline-light.mt-3 {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Ajustes para seções */
+section {
+    margin-bottom: 2rem;
+}
+
+/* Carousel responsivo */
+.carousel-inner img {
+    border-radius: 1rem;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 991px) {
+    .carousel-inner img {
+        max-height: 260px;
+    }
+}
+
+/* Feedback avatar responsivo */
+.img-thumbnail,
+.rounded-circle {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+/* Ajuste de espaçamento para mobile */
+@media (max-width: 576px) {
+
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .card-img-top {
+        height: 140px;
+    }
+
+    .fs-3 {
+        font-size: 1.2rem !important;
+    }
+
+    .display-5 {
+        font-size: 2rem !important;
+    }
+
+    .py-5,
+    .my-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* Footer responsivo extra */
+@media (max-width: 576px) {
+    footer .row>div {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .custom-footer {
+        font-size: 0.95rem;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
